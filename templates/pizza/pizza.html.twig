@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ pizza.nom }} {% endblock %}
+{% block header %}
+    <a href="{{ path('app_index') }}">Accueil</a>
+{% endblock %}
+
+{% block body %}
+            <section class="pizza">
+                <div class="cardPizza">
+                    <img src="{{ asset('images/uploads/' ~ pizza.image ~ '') }}" alt="{{ pizza.nom }}">
+                    <h2>{{ pizza.nom }}</h2>
+                    <p style="text-decoration: underline">{{ pizza.prix/100 }} €</p>
+                    <ul class="list-groupPizza">
+                    <h3>Ingrédients :</h3>
+                        {% for ingredient in pizza.ingredients %}
+                            <li class="">
+                                <p>{{ ingredient.nom }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p  style="text-decoration: underline">{{ pizza.base }}</p>
+                 </div>
+            </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+    <div class="index">
+        <div class="block1">
+            <img src="{{ asset('images/pizza.jpg') }}" alt="Image Pizza">
+            <div class="block1-1">
+                <h1>Bienvenue à la Pizzeria</h1>
+                <p>Venez découvrir nos délicieuses <span class="color-text">pizzas artisanales</span>,
+                   préparées avec des <span class="color-text">ingrédients frais</span> et de <span class="color-text">qualité</span> pour une explosion de saveurs dans votre bouche !
+                </p>
+            </div>
+        </div>
+        <div class="block2">
+            <img src="{{ asset('images/pizza2.jpg') }}" alt="Image Pizza">
+            <div class="block1-1">
+                <h1>Fait 100% maison</h1>
+                <p>Chaque pizza que nous créons est le fruit d'un <span class="color-text">savoir-faire artisanal</span>, avec une attention méticuleuse portée à chaque étape du processus de préparation. Nous nous <span class="color-text">engageons</span> à offrir une expérience gustative exceptionnelle à nos clients</p>
+            </div>
+        </div>
+
+        <div class="block3">
+            <div class="block3-1">
+                <h1>Nos pizzas</h1>
+                    <div id="vue-app">
+                        {# L'appli Vue.js vivra ici #}
+                    </div>
+                <a href="{{ path('app_pizzas') }}" class="btn">Voir les ingrédients des pizzas</a>
+            </div>
+
+            <div class="block3-1">
+                <h1>Une boisson avec ?</h1>
+                <section class="list-boissons">
+                    {% for boisson in boissons %}
+                    <article class="item">
+                        <img src="{{ asset('images/uploads/' ~ boisson.image ~ '') }}" alt="{{ boisson.nom }}">
+                        <p>{{ boisson.nom }}</p>
+                        <p>{{ boisson.prix/100 }} €</p>
+                    </article>
+                    {% endfor %}
+                </section>
+                <a href="{{ path('app_boissons') }}" class="btn">Voir toutes les boissons</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{# @var field \EasyCorp\Bundle\EasyAdminBundle\Dto\FieldDto #}
+{# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
+{% if ea.crud.currentAction == 'detail'  %}
+    <ul class="list-group">
+        {% for ingredient in field.value %}
+            <li class="">
+                {{ ingredient.nom }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <span class="badge badge-secondary">{{  field.value|length }}</span>
+{% endif %}

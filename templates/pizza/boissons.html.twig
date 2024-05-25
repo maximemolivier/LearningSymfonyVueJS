@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Toutes les Boissons{% endblock %}
+{% block header %}
+    <a href="{{ path('app_index') }}">Accueil</a>
+{% endblock %}
+
+{% block body %}
+    <div class="acceuil">
+        <h1>Toutes nos Boissons :</h1>
+        <section class="list-card">
+            {% for boisson in boissons %}
+                <div class="card">
+                    <img src="{{ asset('images/uploads/' ~ boisson.image ~ '') }}" alt="{{ boisson.nom }}">
+                    <h2>{{ boisson.nom }}</h2>
+                    <p style="text-decoration: underline">{{ boisson.prix/100 }} €</p>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+
+{% endblock %}
