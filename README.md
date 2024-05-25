@@ -16,3 +16,13 @@ This project, completed during my computer science bachelor's degree, helped me 
 - **API Platform**
 - **Webpack Encore**
 - **EasyAdmin**
+  
+## Preview
+
+![pizzeria2](https://github.com/maximemolivier/LearningSymfonyVueJS/assets/82213369/569689c4-5115-4b46-b800-d4c754d4ac13)
+
+
+![pizzeria3](https://github.com/maximemolivier/LearningSymfonyVueJS/assets/82213369/9bcc65ff-05de-43c1-9406-29ee12d902b1)
+
+
+![pizzeria4](https://github.com/maximemolivier/LearningSymfonyVueJS/assets/82213369/b57699eb-8275-4a79-a24c-427f10d799a9)
